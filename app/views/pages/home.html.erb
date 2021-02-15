@@ -1,0 +1,21 @@
+<% if current_user %>
+<h1><%= current_user.username %></h1>
+<%= link_to "Sing Out", destroy_user_session_path, method: :delete %>
+<% else %>
+
+
+<body class="text-center" data-new-gr-c-s-check-loaded="14.995.0" data-gr-ext-installed="">
+    <div class="container">
+        <img class="mb-4" src="" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Bem Vindo ao Musicating</h1>
+        <div>
+            <a class="w-50 btn btn-lg btn-primary" href="http://127.0.0.1:3000/users/sign_up" role="button">Registration</a>
+        </div>
+        <div>
+            <a class="w-50 btn btn-lg btn-primary" href="http://127.0.0.1:3000/users/sign_in" role="button">Sign In</a>
+        </div>
+        <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
+    </div>
+</body>
+
+<% end %>
